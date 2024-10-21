@@ -1,0 +1,25 @@
+import './App.css';
+import Navbar from './component/Navbar';
+import {Routes,Route, Link } from 'react-router-dom';
+import Home from './component/Home';
+import AddProduct from './component/AddProduct';
+import EditProduct from './component/EditProduct';
+
+function App() {
+  return (
+   <>
+    <Navbar />
+    <Routes>
+      <Route>
+        <Route path='/' element ={<Home />}></Route>
+        <Route path='/addProduct' element={<AddProduct />}></Route>
+        <Route path='/editProduct/:id' element={<EditProduct />}></Route>
+
+      </Route>
+    </Routes>
+   </>
+    
+  );
+}
+
+export default App;
